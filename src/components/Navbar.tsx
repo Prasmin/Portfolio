@@ -29,7 +29,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="w-full bg-background/95 backdrop-blur-sm shadow">
+    <nav className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur-sm shadow ">
       {/* Desktop Menu */}
       <div className="hidden sm:flex justify-center mx-auto max-w-7xl pt-4">
         <NavigationMenu>
@@ -60,7 +60,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="flex sm:hidden justify-between items-center px-4 py-3">
+      <div className=" flex sm:hidden justify-between items-center px-4 py-3 ">
         <button
           aria-label="Open menu"
           onClick={() => setMobileOpen((open) => !open)}
@@ -72,8 +72,8 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {mobileOpen && (
-        <div className="sm:hidden px-4 pb-4">
-          <div className="flex flex-col gap-y-4">
+        <div className="  sm:hidden px-4 pb-4  absolute w-full bg-background/50 backdrop-blur-xl ">
+          <div className="  flex flex-col gap-y-4  ">
             {navbarItems.map((item) => {
               const isActive = pathname === item.href;
               return (
