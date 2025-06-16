@@ -72,7 +72,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {mobileOpen && (
-        <div className="  sm:hidden px-4 pb-4  absolute w-full bg-background/50 backdrop-blur-xl ">
+        <div className="  sm:hidden px-4 pb-4  absolute w-full bg-background/50 backdrop-blur-xl min-h-screen ">
           <div className="  flex flex-col gap-y-4  ">
             {navbarItems.map((item) => {
               const isActive = pathname === item.href;
