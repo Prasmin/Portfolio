@@ -35,7 +35,7 @@ export default function Hero() {
           />
         </div>
         <h1 className="text-4xl font-extrabold mb-2 text-blue-700">
-          Software Developer
+          Software Engineer
         </h1>
         <p className="mb-8 text-lg text-gray-600">
           Building modern web experiences with passion and precision.
