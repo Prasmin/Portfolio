@@ -1,4 +1,3 @@
-import React from "react";
 import { educationDatas } from "@/lib/EducationData";
 
 export const Education = () => {
@@ -32,7 +31,7 @@ export const Education = () => {
             </div>
 
             {/* Bullet Points */}
-            <div className="list-disc ml-2 text-gray-700 text-sm space-y-1 font-stretch-normal ">
+            <div className="list-disc ml-2 text-gray-700 text-sm sm:space-y-1 space-y-3 font-stretch-normal ">
               {item.bullets.map((bullet, bulletIndex) => (
                 <li key={bulletIndex}>{bullet}</li>
               ))}
