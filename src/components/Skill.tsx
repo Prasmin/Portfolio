@@ -1,29 +1,29 @@
-import { skills } from "@/lib/skills";
+import skills from "@/lib/skills";
 
-export const SkillComponent = () => {
+export const SkillsDisplay = () => {
   return (
-    <section className="sm:max-w-4xl mx-auto py-8 min-h-32">
-      <div>
-        <h3>Skills</h3>
+    <div className="sm:max-w-4xl sm:mx-auto mx-2 py-22 sm:py-32">
+      <h2 className="sm:text-4xl text-xl font-bold text-center mb-8">Skills</h2>
 
+      <div className="sm:space-y-4 space-y-3">
+        {Object.entries(skills).map(([category, skillsList]) => (
+          <div key={category}>
+            <h3 className="sm:text-xl text-lg font-semibold mb-4 capitalize">
+              {category.replace(/-/g, " ")}
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {skillsList.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="px-4 py-2  text-sm font-medium"
+                >
+                  {skill.name}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
-      <div>
-        <h2>Frontend</h2>
-        <div>
-          {skills.frontend.map((skill, index) => (
-            <div key={index} className="flex items-center space-x-2">
-              )}
-        </div>
-      </div>
-      <div>
-        <h2>backend</h2>
-      </div>
-      <div>
-        <h2>devOps</h2>
-      </div>
-      <div>
-        <h2>Testing</h2>
-      </div>
-    </section>
+    </div>
   );
 };

@@ -2,8 +2,8 @@ import { educationDatas } from "@/lib/EducationData";
 
 export const Education = () => {
   return (
-    <section className="sm:max-w-4xl  mx-auto py-8 min-h-screen">
-      <h2 className="flex justify-center text-2xl font-bold mb-8 text-blue-700">
+    <div className="sm:max-w-4xl  mx-auto sm:py-32 py-22 ">
+      <h2 className="flex justify-center text-2xl font-bold mb-8 ">
         Education & Training
       </h2>
 
@@ -17,9 +17,7 @@ export const Education = () => {
             </span>
 
             {/* Education Title */}
-            <h3 className="text-lg font-semibold text-blue-800">
-              {item.title}
-            </h3>
+            <h3 className="text-lg font-semibold ">{item.title}</h3>
 
             {/* Institution & Period */}
             <div className="text-sm text-gray-500 mb-1">
@@ -39,6 +37,6 @@ export const Education = () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
