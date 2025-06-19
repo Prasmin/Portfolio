@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   ],
 
   description:
-    "Prashmin Gurung's portfolio showcasing web development and software engineering projects.",
-  authors: [{ name: "Prashmin Gurung", url: "https://prashmingurung.com" }],
+    "Prashmin Gurung's portfolio showcasing software engineering projects.",
+
   creator: "Prashmin Gurung",
   openGraph: {
     title: "Prashmin Gurung - Portfolio",
     description:
       "Prashmin Gurung's portfolio showcasing web development and software engineering projects.",
-    url: "https://prashmingurung.com",
+
     siteName: "Prashmin Gurung",
     images: [
       {
@@ -38,19 +38,6 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Prashmin Gurung - Portfolio",
-    description:
-      "Prashmin Gurung's portfolio showcasing web development and software engineering projects.",
-    images: ["https://prashmingurung.com/og-image.png"],
-    creator: "@prashmingurung",
-  },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-    shortcut: "/favicon-32x32.png",
   },
 };
 
