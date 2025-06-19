@@ -20,8 +20,7 @@ type NavbarItem = {
 const navbarItems: NavbarItem[] = [
   { href: "/", label: "Home", isActive: true },
   { href: "/projects", label: "Projects" },
-  { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
+  { href: "/aboutme", label: "About Me" },
 ];
 
 export default function Navbar() {
