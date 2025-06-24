@@ -8,7 +8,7 @@ const AboutPage = () => {
           </h1>
 
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <p className="mb-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="mb-6 text-gray-600 dark:text-gray-300 leading-relaxed ">
               Hi! I'm Prashmin Gurung — a tech enthusiast with a passion for
               writing, problem-solving, and continuous learning. With a
               background in IT, I enjoy building thoughtful solutions that

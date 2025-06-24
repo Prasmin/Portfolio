@@ -29,7 +29,7 @@ export const Education = () => {
             </div>
 
             {/* Bullet Points */}
-            <div className="list-disc ml-2 text-gray-700 text-sm sm:space-y-1 space-y-3 font-stretch-normal ">
+            <div className="list-disc ml-2 text-gray-700 text-sm  font-stretch-normal leading-8 ">
               {item.bullets.map((bullet, bulletIndex) => (
                 <li key={bulletIndex}>{bullet}</li>
               ))}
