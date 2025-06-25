@@ -1,35 +1,28 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import Container from "@/components/ui/container";
+import { HeroPost } from "@/components/ui/hero-post";
+import { MoreStories } from "@components/ui/more-stories";
+import { getAllPosts } from "@/lib/api";
 
-export async function getStaticProps() {
-  const postsDir = path.join(process.cwd(), "posts");
-  const filenames = fs.readdirSync(postsDir);
+export default function Index() {
+  const allPosts = getAllPosts();
 
-  const posts = filenames.map((filename) => {
-    const fileContents = fs.readFileSync(path.join(postsDir, filename), "utf8");
-    const { data } = matter(fileContents);
-    return {
-      slug: filename.replace(".md", ""),
-      title: data.title,
-      date: data.date,
-      excerpt: data.excerpt,
-    };
-  });
+  const heroPost = allPosts[0];
 
-  return { props: { posts } };
-}
+  const morePosts = allPosts.slice(1);
 
-export default function Home({ posts }) {
   return (
-    <div>
-      <h1>My Blog</h1>
-      {posts.map((post) => (
-        <a key={post.slug} href={`/blog/${post.slug}`}>
-          <h2>{post.title}</h2>
-          <p>{post.excerpt}</p>
-        </a>
-      ))}
-    </div>
+    <main>
+      <Container>
+        <HeroPost
+          title={heroPost.title}
+          coverImage={heroPost.coverImage}
+          date={heroPost.date}
+          author={heroPost.author}
+          slug={heroPost.slug}
+          excerpt={heroPost.excerpt}
+        />
+        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+      </Container>
+    </main>
   );
 }

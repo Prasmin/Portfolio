@@ -21,6 +21,7 @@ const navbarItems: NavbarItem[] = [
   { href: "/", label: "Home", isActive: true },
   { href: "/projects", label: "Projects" },
   { href: "/aboutme", label: "About Me" },
+  { href: "/blog", label: "Blog" },
 ];
 
 export default function Navbar() {
