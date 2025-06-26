@@ -9,9 +9,10 @@ import { PostHeader } from "@/components/ui/post-header";
 
 export default async function Post(props: Params) {
   const params = await props.params;
+  console.log("Post params:", params);
 
   const post = getPostBySlug(params.slug);
-
+  console.log("post:", post);
   if (!post) {
     return notFound();
   }
@@ -21,7 +22,7 @@ export default async function Post(props: Params) {
   return (
     <main>
       <Container>
-        <article className="mb-32">
+        <article className="mb-32 mt-20">
           <PostHeader
             title={post.title}
             coverImage={post.coverImage}
@@ -49,7 +50,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  const title = "${post.title}";
+  const title = post.title;
 
   return {
     title,
