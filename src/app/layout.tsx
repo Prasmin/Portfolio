@@ -28,14 +28,7 @@ export const metadata: Metadata = {
       "Prashmin Gurung's portfolio showcasing web development and software engineering projects.",
 
     siteName: "Prashmin Gurung",
-    images: [
-      {
-        url: "https://prashmingurung.com/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Prashmin Gurung - Portfolio",
-      },
-    ],
+
     locale: "en_US",
     type: "website",
   },
