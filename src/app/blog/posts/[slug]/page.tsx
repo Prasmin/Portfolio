@@ -9,10 +9,9 @@ import { PostHeader } from "@/components/ui/post-header";
 
 export default async function Post(props: Params) {
   const params = await props.params;
-  console.log("Post params:", params);
 
   const post = getPostBySlug(params.slug);
-  console.log("post:", post);
+
   if (!post) {
     return notFound();
   }
@@ -44,6 +43,7 @@ type Params = {
 
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
+
   const post = getPostBySlug(params.slug);
 
   if (!post) {
@@ -53,6 +53,9 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
   const title = post.title;
 
   return {
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+    ),
     title,
     openGraph: {
       title,
